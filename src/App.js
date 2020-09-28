@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Menu from "./components/MenuComponent.js";
 import "./App.css";
-import { DISHED, DISHES } from "./shared/dishes.js";
+import { DISHES } from "./shared/dishes.js";
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class App extends Component {
 
         <Menu dishes={this.state.dishes} />
 
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -38,7 +38,7 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
       </div>
     );
   }
