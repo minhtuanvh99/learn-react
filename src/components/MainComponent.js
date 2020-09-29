@@ -37,7 +37,7 @@ class Main extends Component {
           dish={
             // this.state.dishes[0]
             this.state.dishes.filter((dish) => {
-              console.log(this.state.selectedDish, dish.id); //no problem
+              // console.log(this.state.selectedDish, dish.id); //no problem
               return dish.id === this.state.selectedDish;
             })[0]
           }
