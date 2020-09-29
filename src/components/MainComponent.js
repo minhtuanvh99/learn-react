@@ -30,13 +30,14 @@ class Main extends Component {
         <Menu
           dishes={this.state.dishes}
           onClick={(dishId) => {
-            return this.onDishSelect(dishId); // no prop
+            return this.onDishSelect(dishId); // no problem
           }}
         />
         <DishDetail
           dish={
+            // this.state.dishes[0]
             this.state.dishes.filter((dish) => {
-              //   console.log(this.state.selectedDish, dish.id); //no problem
+              console.log(this.state.selectedDish, dish.id); //no problem
               return dish.id === this.state.selectedDish;
             })[0]
           }

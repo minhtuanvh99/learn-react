@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 class DishDetail extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    console.log(this.props); // props got undefined!!
   }
 
   renderDish(dish) {
@@ -22,8 +22,8 @@ class DishDetail extends Component {
       return <div></div>;
     }
   }
+
   renderComments(dish) {
-    // console.log(dish);
     if (dish != null && dish.comments != null) {
       const cmt = dish.comments.map((comment) => {
         return (
@@ -51,10 +51,10 @@ class DishDetail extends Component {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-5 m-1">
-            {this.renderDish(this.props.selectedDish)}
+            {this.renderDish(this.props.dish)}
           </div>
           <div className="col-12 col-md-5 m-1">
-            {this.renderComments(this.props.selectedDish)}
+            {this.renderComments(this.props.dish)}
           </div>
         </div>
       </div>
